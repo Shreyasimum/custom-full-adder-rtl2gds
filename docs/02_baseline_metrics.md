@@ -23,3 +23,18 @@ These metrics are obtained from generic synthesis
 using Yosys before technology mapping and physical design.
 They serve as the reference baseline for future optimization
 and custom standard-cell comparison.
+## Baseline Synthesis Results (Sky130 – Optimized Mapping)
+
+| Metric | Value |
+|------|------|
+| Total standard cells | 2 |
+| XOR3 cells | 1 |
+| MAJ3 cells | 1 |
+| Library | sky130_fd_sc_hd |
+| Corner | tt_025C_1v80 |
+
+### Observations
+The synthesis tool inferred higher-order standard cells
+(`xor3`, `maj3`) from the Sky130 library, significantly
+reducing gate count compared to naive AND/OR/XOR mapping.
+This reflects technology-aware optimization.
